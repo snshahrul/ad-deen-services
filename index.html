@@ -14,14 +14,15 @@
 
 <!-- Navigation -->
 <nav class="navbar" id="navbar">
+  <div class="scroll-progress" id="scrollProgress"></div>
   <div class="container nav-container">
-    <a href="#" class="nav-logo">
+    <a href="#" class="nav-logo" aria-label="Return to top">
       <i class="fas fa-fire"></i> AD DEEN<span>Engineering</span>
     </a>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
       <i class="fas fa-moon"></i>
     </button>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
       <span></span>
       <span></span>
       <span></span>
@@ -53,7 +54,7 @@
         <span class="badge badge-accent"><i class="fas fa-wrench"></i> Boiler Repair</span>
         <span class="badge"><i class="fas fa-certificate"></i> ASME Certified</span>
       </div>
-      <h1>AD DEEN Engineering Services</h1>
+      <h1>AD DEEN Engineering</h1>
       <p class="subhead">
         <i class="fas fa-fire-flame-curved highlight-icon"></i> <strong class="highlight">Specialist in Boiler Services & Repair</strong> — Complete boiler maintenance, repair, and compliance solutions for industrial facilities.
       </p>
@@ -83,7 +84,9 @@
     <div class="hero-photo">
       <div class="photo-wrapper">
         <div class="photo-img">
-          <img src="../../../OneDrive/Documents/folder 2026/logo/AD-DEEN-ENGINEERING LOGO.png" width="245" height="140" style="border: 0; vertical-align: top" alt="">
+          <div class="photo-placeholder">
+            <i class="fas fa-fire"></i>
+          </div>
         </div>
         <div class="photo-accent"></div>
       </div>
@@ -801,51 +804,83 @@
         </div>
         
         <!-- Address Block -->
-        <div class="contact-address-block">
-          <i class="fas fa-map-marker-alt"></i>
+        <div class="contact-grid">
           <div>
-            <strong>AD DEEN Engineering Services</strong><br>
-            No. 21 Jalan Pantu Satu, U2/31A<br>
-            Taman TTDI Jaya, 40150 Shah Alam<br>
-            Selangor, Malaysia
-          </div>
-        </div>
-
-        <div class="contact-details-grid">
-          <div class="contact-detail-item">
-            <div class="contact-detail-icon">
-              <i class="fas fa-phone-alt"></i>
-            </div>
-            <div class="contact-detail-content">
-              <span class="contact-detail-label">Phone / WhatsApp</span>
-              <a href="tel:+60193838699">+60 19-383 8699</a>
-            </div>
-          </div>
-          <div class="contact-detail-item">
-            <div class="contact-detail-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="contact-detail-content">
-              <span class="contact-detail-label">Email</span>
-              <a href="mailto:honda8161@yahoo.com.my">honda8161@yahoo.com.my</a>
-            </div>
-          </div>
-          <div class="contact-detail-item">
-            <div class="contact-detail-icon">
+            <div class="contact-address-block">
               <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>AD DEEN Engineering Services</strong><br>
+                No. 21 Jalan Pantu Satu, U2/31A<br>
+                Taman TTDI Jaya, 40150 Shah Alam<br>
+                Selangor, Malaysia
+              </div>
             </div>
-            <div class="contact-detail-content">
-              <span class="contact-detail-label">Location</span>
-              <span>Shah Alam, Selangor</span>
+
+            <div class="contact-details-grid">
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="contact-detail-content">
+                  <span class="contact-detail-label">Phone / WhatsApp</span>
+                  <a href="tel:+60193838699">+60 19-383 8699</a>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-detail-content">
+                  <span class="contact-detail-label">Email</span>
+                  <a href="mailto:honda8161@yahoo.com.my">honda8161@yahoo.com.my</a>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-detail-content">
+                  <span class="contact-detail-label">Location</span>
+                  <span>Shah Alam, Selangor</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-buttons">
+              <a href="tel:+60193838699" class="btn btn-light"><i class="fas fa-phone-alt"></i> Call Now</a>
+              <a href="mailto:honda8161@yahoo.com.my" class="btn btn-outline-light"><i class="fas fa-envelope"></i> Email Us</a>
             </div>
           </div>
+
+          <form id="contactForm" class="contact-form" action="https://formsubmit.co/honda8161@yahoo.com.my" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New inquiry from AD DEEN Engineering Services">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_autoresponse" value="Thanks for getting in touch. We will contact you soon.">
+            <input type="hidden" name="_next" value="thank-you.html">
+            <input type="hidden" name="_honey" style="display:none">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Full Name</label>
+                <input type="text" id="contactName" name="name" class="form-input" placeholder="Your full name" required>
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email Address</label>
+                <input type="email" id="contactEmail" name="email" class="form-input" placeholder="you@example.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactPhone">Phone / WhatsApp</label>
+              <input type="tel" id="contactPhone" name="phone" class="form-input" placeholder="+60 19-383 8699">
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" name="message" class="form-textarea" rows="5" placeholder="Tell us about your project or issue" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </form>
         </div>
 
-        <div class="contact-buttons">
-          <a href="tel:+60193838699" class="btn btn-light"><i class="fas fa-phone-alt"></i> Call Now</a>
-          <a href="mailto:honda8161@yahoo.com.my" class="btn btn-outline-light"><i class="fas fa-envelope"></i> Email Us</a>
-        </div>
-        
         <p class="contact-location"><i class="fas fa-clock"></i> Mon - Fri: 8:00 AM - 6:00 PM | Emergency: 24/7</p>
       </div>
     </div>
@@ -909,8 +944,9 @@
   
   if (navToggle && navMenu) {
     navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
+      const isOpen = navMenu.classList.toggle('active');
       navToggle.classList.toggle('active');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
     });
 
     // Close menu when clicking a link
@@ -918,6 +954,7 @@
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
       });
     });
   }
@@ -930,6 +967,15 @@
     } else {
       navbar.classList.remove('scrolled');
     }
+  });
+
+  // Scroll Progress Indicator
+  const scrollProgress = document.getElementById('scrollProgress');
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    scrollProgress.style.transform = `scaleX(${scrollPercent / 100})`;
   });
 
   // Active nav link on scroll
@@ -955,9 +1001,11 @@
 
   // FAQ Accordion
   document.querySelectorAll('.faq-question').forEach(button => {
+    button.setAttribute('aria-expanded', 'false');
     button.addEventListener('click', () => {
       const faqItem = button.parentElement;
-      faqItem.classList.toggle('active');
+      const isActive = faqItem.classList.toggle('active');
+      button.setAttribute('aria-expanded', String(isActive));
     });
   });
 
@@ -973,6 +1021,30 @@
       }
     });
   });
+
+  // Contact form submission
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+
+  if (contactForm && formStatus) {
+    contactForm.addEventListener('submit', event => {
+      const name = document.getElementById('contactName');
+      const email = document.getElementById('contactEmail');
+      const message = document.getElementById('contactMessage');
+
+      if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
+        event.preventDefault();
+        formStatus.textContent = 'Please complete the required fields before sending.';
+        formStatus.classList.remove('success');
+        formStatus.classList.add('error');
+        return;
+      }
+
+      formStatus.textContent = 'Sending message...';
+      formStatus.classList.remove('error');
+      formStatus.classList.add('success');
+    });
+  }
 
   // Dark Mode Toggle
   const themeToggle = document.getElementById('themeToggle');
