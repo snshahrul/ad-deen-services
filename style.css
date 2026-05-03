@@ -16,7 +16,7 @@
   --accent-rgba: rgba(230, 57, 70, 0.1);
   
   /* Neutral Colors - Light Mode */
-  --bg-light: #f8fafc;
+  --bg-light: #10e818;
   --bg-white: #ffffff;
   --bg-alt: #edf2f7;
   --text-dark: #1a202c;
@@ -46,7 +46,7 @@
   --bg-light: #0d1117;
   --bg-white: #161b22;
   --bg-alt: #21262d;
-  --text-dark: #f0f6fc;
+  --text-dark: #ced2db;
   --text-muted: #8b949e;
   --text-light: #6e7681;
   --border: #30363d;
@@ -540,7 +540,7 @@ a {
 .photo-wrapper {
   position: relative;
   width: 280px;
-  height: 280px;
+  height: 150px;
 }
 
 .photo-img {
