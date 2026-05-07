@@ -1,0 +1,23 @@
+{
+  "name": "ad-deen-services-platform",
+  "version": "1.0.0",
+  "description": "ad-deen - Specialist in Boiler Services & Repair",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.x"
+  },
+  "keywords": [
+    "boiler_service",
+    "boiler-repair",
+    "predictive-maintenance",
+    "asset-integrity"
+  ],
+  "author": "AD-Deen",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
