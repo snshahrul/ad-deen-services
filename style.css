@@ -1,10 +1,9 @@
-/* ============================================
+﻿/* ============================================
    PROFESSIONAL ENGINEERING PORTFOLIO - ENHANCED 2026
    ============================================ */
 
 :root {
-  /* Enhanced Primary Colors */
-  --primary: #104487;
+  --primary: #0A4D68;
   --primary-light: #57f13c;
   --primary-dark: #0d47a1;
   --primary-rgba: rgba(26, 115, 232, 0.1);
@@ -620,9 +619,10 @@ a {
 .hero {
   position: relative;
   padding: 140px 0 100px;
-  background: linear-gradient(135deg, #0d47a1 0%, #1976d2 25%, #42a5f5 50%, #1e88e5 75%, #0d47a1 100%);
-  background-size: 400% 400%;
-  animation: gradientShift 8s ease infinite;
+  background-image: url('Fired-Water-Tube-Boiler-2-768x512.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   overflow: hidden;
   min-height: 100vh;
   display: flex;
@@ -636,11 +636,34 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
+  background: linear-gradient(135deg, rgba(10, 77, 104, 0.92) 0%, rgba(13, 71, 161, 0.88) 50%, rgba(25, 118, 210, 0.85) 100%);
+  z-index: 0;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(10, 77, 104, 0.92) 0%, rgba(13, 71, 161, 0.88) 50%, rgba(25, 118, 210, 0.85) 100%);
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: 
-    radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.15) 0%, transparent 40%),
-    radial-gradient(circle at 40% 40%, rgba(26, 115, 232, 0.1) 0%, transparent 60%);
+    radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 40% 40%, rgba(26, 115, 232, 0.08) 0%, transparent 60%);
   pointer-events: none;
+  z-index: 1;
 }
 
 .hero-bg-shapes {
@@ -689,7 +712,7 @@ a {
   gap: 4rem;
   align-items: center;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero-content {
@@ -787,7 +810,7 @@ a {
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  border: 4px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   background: linear-gradient(135deg, #2c5282, #1a365d);
 }
 
@@ -799,27 +822,25 @@ a {
 }
 
 .photo-placeholder {
-  width: 100%;
+  width: 50%;
   height: 100%;
-  background: linear-gradient(135deg, #2c5282, #1a365d);
   border-radius: var(--radius-xl);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 5rem;
-  color: rgba(255, 255, 255, 0.3);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  border: 4px solid rgba(255, 255, 255, 0.1);
+
 }
 
 .photo-accent {
   position: absolute;
   top: -15px;
   right: -15px;
-  width: 60px;
-  height: 60px;
+  width: 30px;
+  height: 30px;
   background: var(--accent);
-  border-radius: 50%;
+  border-radius: 10%;
   opacity: 0.5;
 }
 
